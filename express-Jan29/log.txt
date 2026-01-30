@@ -1,0 +1,2 @@
+timestamp: Fri Jan 30 2026 09:25:23 GMT+0530 (India Standard Time) url /data method GET 
+timestamp: Fri Jan 30 2026 09:25:32 GMT+0530 (India Standard Time) url /data/2 method DELETE 
