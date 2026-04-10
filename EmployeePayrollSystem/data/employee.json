@@ -1,0 +1,39 @@
+[
+  {
+    "id": "2",
+    "name": "Amit Sharma",
+    "email": "amit.sharma@email.com",
+    "password": "2345678",
+    "department": "HR",
+    "basicSalary": 45000,
+    "joiningDate": "2022-08-10",
+    "notes": "good performance"
+  },
+  {
+    "id": "1775703520010",
+    "name": "Swapnaneel bvgj",
+    "profilePic": "img2",
+    "gender": "Male",
+    "department": "Sales",
+    "basicSalary": "30000",
+    "joiningDate": "16 Feb 2024",
+    "notes": "qwertyuikmn"
+  },
+  {
+    "id": "1775704288269",
+    "name": "Something Is ok",
+    "gender": "Female",
+    "basicSalary": "40000",
+    "joiningDate": "2026-03-23"
+  },
+  {
+    "id": "1775705106814",
+    "name": "werty",
+    "profilePic": "img1",
+    "gender": "Male",
+    "department": "Sales",
+    "basicSalary": "40000",
+    "joiningDate": "2026-04-02",
+    "notes": "sdgfhf"
+  }
+]

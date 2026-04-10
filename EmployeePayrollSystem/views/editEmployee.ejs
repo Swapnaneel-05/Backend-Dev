@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit page</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+        body { background-color: #f7f7f7; display: flex; justify-content: center; padding: 40px 0; }
+        .form-container { background: white; width: 600px; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #e2e2e2; }
+        h2 { color: #42515f; margin-bottom: 30px; font-size: 28px; }
+        .row { margin-bottom: 25px; display: flex; align-items: center; }
+        label { width: 140px; color: #42515f; font-weight: 500; font-size: 16px; }
+        input[type="text"], select, textarea { flex: 1; padding: 12px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+        .radio-group { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; }
+        .radio-group img { width: 40px; border-radius: 50%; }
+        .button-row { display: flex; justify-content: space-between; margin-top: 40px; }
+        .btn { padding: 12px 35px; border-radius: 5px; border: none; cursor: pointer; font-size: 16px; font-weight: bold; }
+        .submit-btn { background-color: #f5f5f5; color: #42515f; border: 1px solid #e2e2e2; }
+        .cancel-btn { background-color: #f5f5f5; color: #42515f; border: 1px solid #e2e2e2; }
+        .reset-btn { background-color: #f5f5f5; color: #42515f; border: 1px solid #e2e2e2; }
+        .submit-btn:hover { background-color: #82a70c; color: white; }
+    </style>    
+
+</head>
+<body>
+    <div class="form-container">
+    <h2>Edit Employee</h2>
+    <form action="/update/<%= employee._id %>" method="POST">
+        
+        <div class="row">
+            <label>Name</label>
+            <input type="text" name="name" value="<%= employee.name %>" required>
+        </div>
+
+        <div class="row">
+            <label>Gender</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" value="Male" <%= employee.gender === 'Male' ? 'checked' : '' %>> Male
+                <input type="radio" name="gender" value="Female" <%= employee.gender === 'Female' ? 'checked' : '' %>> Female
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Department</label>
+                <input type="text" name="department" value="<%= employee.department %>">
+        </div>
+
+        <div class="row">
+            <label>Start Date</label>
+                <input type="date" name="joiningDate" value="<%= employee.joiningDate %>" required>
+        </div>
+
+        <div class="row">
+            <label>Salary</label>
+            <select name="basicSalary">
+                <option value="<%= employee.basicSalary %>"><%= employee.basicSalary %></option>
+                <option value="30000">30000</option>
+                <option value="40000">40000</option>
+            </select>
+        </div>
+
+        <div class="button-row">
+            <button type="button" onclick="window.location.href='/'">Cancel</button>
+            <button type="submit">Update Employee</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Payroll Form</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f7f7f7; 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px; 
+        }
+        .form-container { 
+            background: white; 
+            padding: 30px; 
+            width: 600px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        }
+        h2 { color: #42515f; margin-bottom: 30px; }
+        .row { margin-bottom: 25px; display: flex; align-items: center; }
+        label { width: 140px; color: #42515f; font-weight: 500; }
+        input[type="text"], select, textarea { 
+            flex: 1; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 4px; 
+        }
+        .radio-group { display: flex; align-items: center; gap: 15px; }
+        .radio-group img { width: 40px; border-radius: 50%; }
+        .button-row { display: flex; justify-content: space-between; margin-top: 30px; }
+        button { 
+            padding: 10px 30px; 
+            border-radius: 4px; 
+            border: none; 
+            cursor: pointer; 
+            font-size: 16px; 
+        }
+        .submit-btn { background-color: #e2e2e2; color: #42515f; }
+        .cancel-btn, .reset-btn { background-color: #e2e2e2; color: #42515f; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Employee Payroll Form</h2>
+    
+    <form action="/emp" method="POST">
+        
+        <div class="row">
+            <label>Name</label>
+            <input type="text" name="name" required>
+        </div>
+
+        <div class="row">
+            <label>Profile image</label>
+            <div class="radio-group">
+                <input type="radio" name="profilePic" value="img1" required> 
+                <img src="https://i.pravatar.cc/100?u=1" alt="p1">
+                <input type="radio" name="profilePic" value="img2"> 
+                <img src="https://i.pravatar.cc/100?u=2" alt="p2">
+                <input type="radio" name="profilePic" value="img3"> 
+                <img src="https://i.pravatar.cc/100?u=3" alt="p3">
+                <input type="radio" name="profilePic" value="img4"> 
+                <img src="https://i.pravatar.cc/100?u=4" alt="p4">
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Gender</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" value="Male" required> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Department</label>
+            <div class="radio-group">
+                <input type="checkbox" name="department" value="HR"> HR
+                <input type="checkbox" name="department" value="Sales"> Sales
+                <input type="checkbox" name="department" value="Finance"> Finance
+                <input type="checkbox" name="department" value="Engineer"> Engineer
+                <input type="checkbox" name="department" value="Others"> Others
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Salary</label>
+            <select name="basicSalary" required>
+                <option value="">Select Salary</option>
+                <option value="30000">30000</option>
+                <option value="40000">40000</option>
+                <option value="50000">50000</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label>Start Date</label>
+                <input type="date" name="joiningDate" required>
+        </div>
+
+        <div class="row">
+            <label>Notes</label>
+            <textarea name="notes" rows="4"></textarea>
+        </div>
+
+        <div class="button-row">
+            <button type="button" class="cancel-btn" onclick="window.location.href='/'">Cancel</button>
+            <div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </div>
+        </div>
+
+    </form>
+    </div>
+
+</body>
+</html> 
